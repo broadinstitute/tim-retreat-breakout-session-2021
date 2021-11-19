@@ -1,0 +1,18 @@
+dct:identifier	xsd:anyURI, xsd:string		An unambiguous reference to the resource within a given context.	
+rdfs:label	xsd:string		A human-readable name for the entity	
+TerraCore:hasCrossReference	xsd:anyURI, xsd:string		Reference to the entity in another electronic system.  The data stored about the entity may vary from system to system, but this relationship asserts that the reference represents the same entity.	
+TerraCore:hasDiagnosis	TerraCore:Diagnosis			
+TerraCore:hasDisease	TerraCore:OntologyReference		A property that identifies a disease or condition has been reported in this entity.	
+TerraCore:hasEthnicity	xsd:anyURI, xsd:string			HumanDonor only
+TerraCore:hasMedicalHistory	TerraCore:MedicalHistory			
+TerraCore:hasOrganismType		See ValueSets	A reference to the organism type.	
+TerraCore:hasRace		See ValueSets	A property that relects a HumanDonor's reported race. 	HumanDonor only
+TerraCore:hasGenotypicSex		See ValueSets	A biological sex quality inhering in an individual based upon genotypic composition of sex chromosomes. [PATO]	
+TerraCore:hasPhenotypicSex		See ValueSets	A reference to the BiologicalSex of the Donor organism.	
+TerraCore:hasSexAssignedAtBirth		See ValueSets	A reference to the BiologicalSex assigned to the donor organism at birth by a medical professional.	
+Age_hasAgeUnit		See ValueSets		
+Age_hasAgeCategory		See ValueSets		
+Age_hasLifestage		See ValueSets		
+Age_hasLowerBound	xsd:decimal			
+Age_hasUpperBound	xsd:decimal			
+dct:isPartOf 	TerraDCAT_ap:Dataset		A related resource in which the described resource is physically or logically included. {@en-US}	

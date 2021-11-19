@@ -1,0 +1,464 @@
+{
+  "tim": [
+    {
+      "name": "Project",
+      "description": "A collective effort with an objective related to biomedical research.",
+      "identifier": "https://datamodel.terra.bio/TerraCore#Project",
+      "fields": [
+        {
+          "name": "identifier",
+          "description": "An unambiguous reference to the resource within a given context.",
+          "identifier": "dct:identifier"
+        },
+        {
+          "name": "label",
+          "description": "A human-readable name for the entity. [used in TIM for the short name of the project]",
+          "identifier": "rdfs:label"
+        },
+        {
+          "name": "title",
+          "description": "A name given to the resource. [used in TIM for the full title]",
+          "identifier": "dct:title"
+        },
+        {
+          "name": "hasCrossReference",
+          "description": "Reference to the entity in another electronic system.  The data stored about the entity may vary from system to system, but this relationship asserts that the reference represents the same entity.",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasCrossReference"
+        },
+        {
+          "name": "description",
+          "description": "An account of the resource.",
+          "identifier": "dct:description"
+        },
+        {
+          "name": "contributor",
+          "description": "An entity responsible for making contributions to the resource.",
+          "identifier": "dct:contributor"
+        },
+        {
+          "name": "wasAssociatedWith",
+          "description": "",
+          "identifier": "prov:wasAssociatedWith"
+        },
+        {
+          "name": "isFundedBy",
+          "description": "",
+          "identifier": "https://datamodel.terra.bio/TerraCore#isFundedBy"
+        },
+        {
+          "name": "hasOriginalPublication",
+          "description": "",
+          "identifier": "TerraDCAT_ap:hasOriginalPublication"
+        },
+        {
+          "name": "hasPrincipalInvestigator",
+          "description": "A Principal Investigator associated with this entity.",
+          "identifier": "TerraDCAT_ap:hasPrincipalInvestigator"
+        },
+        {
+          "name": "generated",
+          "description": "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.",
+          "identifier": "prov:generated"
+        }
+      ]
+    },
+    {
+      "name": "Donor",
+      "description": "An organism from which a sample or test result is available.",
+      "identifier": "https://datamodel.terra.bio/TerraCore#Donor",
+      "fields": [
+        {
+          "name": "identifier",
+          "description": "An unambiguous reference to the resource within a given context.",
+          "identifier": "dct:identifier"
+        },
+        {
+          "name": "label",
+          "description": "A human-readable name for the entity",
+          "identifier": "rdfs:label"
+        },
+        {
+          "name": "hasCrossReference",
+          "description": "Reference to the entity in another electronic system.  The data stored about the entity may vary from system to system, but this relationship asserts that the reference represents the same entity.",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasCrossReference"
+        },
+        {
+          "name": "hasDiagnosis",
+          "description": "",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasDiagnosis"
+        },
+        {
+          "name": "hasDisease",
+          "description": "A property that identifies a disease or condition has been reported in this entity.",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasDisease"
+        },
+        {
+          "name": "hasEthnicity",
+          "description": "",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasEthnicity"
+        },
+        {
+          "name": "hasMedicalHistory",
+          "description": "",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasMedicalHistory"
+        },
+        {
+          "name": "hasOrganismType",
+          "description": "A reference to the organism type.",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasOrganismType"
+        },
+        {
+          "name": "hasRace",
+          "description": "A property that relects a HumanDonor's reported race.",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasRace"
+        },
+        {
+          "name": "hasGenotypicSex",
+          "description": "A biological sex quality inhering in an individual based upon genotypic composition of sex chromosomes. [PATO]",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasGenotypicSex"
+        },
+        {
+          "name": "hasPhenotypicSex",
+          "description": "A reference to the BiologicalSex of the Donor organism.",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasPhenotypicSex"
+        },
+        {
+          "name": "hasSexAssignedAtBirth",
+          "description": "A reference to the BiologicalSex assigned to the donor organism at birth by a medical professional.",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasSexAssignedAtBirth"
+        },
+        {
+          "name": "Age_hasAgeUnit",
+          "description": "",
+          "identifier": "Age_hasAgeUnit"
+        },
+        {
+          "name": "Age_hasAgeCategory",
+          "description": "",
+          "identifier": "Age_hasAgeCategory"
+        },
+        {
+          "name": "Age_hasLifestage",
+          "description": "",
+          "identifier": "Age_hasLifestage"
+        },
+        {
+          "name": "Age_hasLowerBound",
+          "description": "",
+          "identifier": "Age_hasLowerBound"
+        },
+        {
+          "name": "Age_hasUpperBound",
+          "description": "",
+          "identifier": "Age_hasUpperBound"
+        },
+        {
+          "name": "isPartOf",
+          "description": "A related resource in which the described resource is physically or logically included. {@en-US}",
+          "identifier": "dct:isPartOf"
+        }
+      ]
+    },
+    {
+      "name": "BioSample",
+      "description": "Data about a physical sample consisting of one or more cells taken from an organism (living or deceased) or derived from such a Sample.",
+      "identifier": "https://datamodel.terra.bio/TerraCore#BioSample",
+      "fields": [
+        {
+          "name": "identifier",
+          "description": "An unambiguous reference to the resource within a given context.",
+          "identifier": "dct:identifier"
+        },
+        {
+          "name": "label",
+          "description": "A human-readable name for the entity",
+          "identifier": "rdfs:label"
+        },
+        {
+          "name": "hasCrossReference",
+          "description": "Reference to the entity in another electronic system.  The data stored about the entity may vary from system to system, but this relationship asserts that the reference represents the same entity.",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasCrossReference"
+        },
+        {
+          "name": "hasBioSampleType",
+          "description": "",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasBioSampleType"
+        },
+        {
+          "name": "wasDerivedFrom",
+          "description": "",
+          "identifier": "https://datamodel.terra.bio/TerraCore#wasDerivedFrom"
+        },
+        {
+          "name": "hasDisease",
+          "description": "A property that identifies a disease or condition has been reported in this entity.",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasDisease"
+        },
+        {
+          "name": "hasDevelopmentalStage",
+          "description": "",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasDevelopmentalStage"
+        },
+        {
+          "name": "hasDataCollected",
+          "description": "Date the BioSample was originally collected from its Donor.",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasDataCollected"
+        },
+        {
+          "name": "hasPreservationState",
+          "description": "",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasPreservationState"
+        },
+        {
+          "name": "hasAnatomicalSite",
+          "description": "A reference to the site within the organism from which the BioSample was taken.",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasAnatomicalSite"
+        },
+        {
+          "name": "hasSelectedCellType",
+          "description": "",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasSelectedCellType"
+        },
+        {
+          "name": "wasUsedBy",
+          "description": "",
+          "identifier": "prov:wasUsedBy"
+        },
+        {
+          "name": "Age_hasAgeUnit",
+          "description": "",
+          "identifier": "Age_hasAgeUnit"
+        },
+        {
+          "name": "Age_hasAgeCategory",
+          "description": "",
+          "identifier": "Age_hasAgeCategory"
+        },
+        {
+          "name": "Age_hasLifestage",
+          "description": "",
+          "identifier": "Age_hasLifestage"
+        },
+        {
+          "name": "Age_hasLowerBound",
+          "description": "",
+          "identifier": "Age_hasLowerBound"
+        },
+        {
+          "name": "Age_hasUpperBound",
+          "description": "",
+          "identifier": "Age_hasUpperBound"
+        },
+        {
+          "name": "hasDonor",
+          "description": "This property references the Donor organism from which the BioSample was acquired.",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasDonor"
+        },
+        {
+          "name": "isPartOf",
+          "description": "A related resource in which the described resource is physically or logically included. {@en-US}",
+          "identifier": "dct:isPartOf"
+        }
+      ]
+    },
+    {
+      "name": "Project",
+      "description": "A collective effort with an objective related to biomedical research.",
+      "identifier": "https://datamodel.terra.bio/TerraCore#Project",
+      "fields": [
+        {
+          "name": "identifier",
+          "description": "An unambiguous reference to the resource within a given context.",
+          "identifier": "dct:identifier"
+        },
+        {
+          "name": "label",
+          "description": "A human-readable name for the entity. [used in TIM for the short name of the project]",
+          "identifier": "rdfs:label"
+        },
+        {
+          "name": "title",
+          "description": "A name given to the resource. [used in TIM for the full title]",
+          "identifier": "dct:title"
+        },
+        {
+          "name": "hasCrossReference",
+          "description": "Reference to the entity in another electronic system.  The data stored about the entity may vary from system to system, but this relationship asserts that the reference represents the same entity.",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasCrossReference"
+        },
+        {
+          "name": "description",
+          "description": "An account of the resource.",
+          "identifier": "dct:description"
+        },
+        {
+          "name": "contributor",
+          "description": "An entity responsible for making contributions to the resource.",
+          "identifier": "dct:contributor"
+        },
+        {
+          "name": "wasAssociatedWith",
+          "description": "",
+          "identifier": "prov:wasAssociatedWith"
+        },
+        {
+          "name": "isFundedBy",
+          "description": "",
+          "identifier": "https://datamodel.terra.bio/TerraCore#isFundedBy"
+        },
+        {
+          "name": "hasOriginalPublication",
+          "description": "",
+          "identifier": "TerraDCAT_ap:hasOriginalPublication"
+        },
+        {
+          "name": "hasPrincipalInvestigator",
+          "description": "A Principal Investigator associated with this entity.",
+          "identifier": "TerraDCAT_ap:hasPrincipalInvestigator"
+        },
+        {
+          "name": "generated",
+          "description": "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.",
+          "identifier": "prov:generated"
+        }
+      ]
+    },
+    {
+      "name": "Dataset",
+      "description": "An extension of DCAT:Dataset to support Data Use Ontology terms. A collection of one or more entities submitted by a single responsible party or authorizing agent.",
+      "identifier": "https://datamodel.terra.bio/TerraCore#Dataset",
+      "fields": [
+        {
+          "name": "identifier",
+          "description": "An unambiguous reference to the resource within a given context.",
+          "identifier": "dct:identifier"
+        },
+        {
+          "name": "label",
+          "description": "A human-readable name for the entity",
+          "identifier": "rdfs:label"
+        },
+        {
+          "name": "hasCrossReference",
+          "description": "Reference to the entity in another electronic system.  The data stored about the entity may vary from system to system, but this relationship asserts that the reference represents the same entity.",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasCrossReference"
+        },
+        {
+          "name": "title",
+          "description": "A name given to the resource.",
+          "identifier": "dc:title"
+        },
+        {
+          "name": "description",
+          "description": "An account of the resource.",
+          "identifier": "dc:description"
+        },
+        {
+          "name": "conformsTo",
+          "description": "An established standard to which the described resource conforms.",
+          "identifier": "dct:conformsTo"
+        },
+        {
+          "name": "contactPoint",
+          "description": "Relevant contact information for the catalogued resource. Use of vCard is recommended. {@en}",
+          "identifier": "dcat:contactPoint"
+        },
+        {
+          "name": "hasOwner",
+          "description": "The entity responsible for making the item available and responsible for identifying authorized users of the Dataset or DataCollection.",
+          "identifier": "TerraDCAT_ap:hasOwner"
+        },
+        {
+          "name": "hasDataUsePermission",
+          "description": "",
+          "identifier": "TerraDCAT_ap:hasDataUsePermission"
+        },
+        {
+          "name": "keyword",
+          "description": "",
+          "identifier": "dcat:keyword"
+        },
+        {
+          "name": "contributor",
+          "description": "",
+          "identifier": "dct:contributor"
+        },
+        {
+          "name": "license",
+          "description": "",
+          "identifier": "dct:license"
+        },
+        {
+          "name": "wasAssociatedWith",
+          "description": "",
+          "identifier": "prov:wasAssociatedWith"
+        },
+        {
+          "name": "wasGeneratedBy",
+          "description": "",
+          "identifier": "prov:wasGeneratedBy"
+        },
+        {
+          "name": "hasDataModality",
+          "description": "Data modality describes the biological nature of the information gathered as the result of an Activity, independent of the technology or methods used to produce the information.",
+          "identifier": "https://datamodel.terra.bio/TerraCore#hasDataModality"
+        },
+        {
+          "name": "isFundedBy",
+          "description": "",
+          "identifier": "https://datamodel.terra.bio/TerraCore#isFundedBy"
+        },
+        {
+          "name": "hasOriginalPublication",
+          "description": "",
+          "identifier": "TerraDCAT_ap:hasOriginalPublication"
+        },
+        {
+          "name": "isPrincipalInvestigator",
+          "description": "",
+          "identifier": "TerraDCAT_ap:isPrincipalInvestigator"
+        },
+        {
+          "name": "hasDataUseModifier",
+          "description": "",
+          "identifier": "TerraDCAT_ap:hasDataUseModifier"
+        },
+        {
+          "name": "issued",
+          "description": "",
+          "identifier": "dct:issued"
+        },
+        {
+          "name": "modified",
+          "description": "",
+          "identifier": "dct:modified"
+        },
+        {
+          "name": "hasCustodian",
+          "description": "",
+          "identifier": "TerraDCAT_ap:hasCustodian"
+        },
+        {
+          "name": "creator",
+          "description": "",
+          "identifier": "dc:creator"
+        },
+        {
+          "name": "hasDataSnapshot",
+          "description": "An available distribution of the Dataset.",
+          "identifier": "TerraDCAT_ap:hasDataSnapshot"
+        },
+        {
+          "name": "hasPart",
+          "description": "A related resource that is included either physically or logically in the described resource. {@en-US}",
+          "identifier": "dct:hasPart"
+        },
+        {
+          "name": "isPartOf",
+          "description": "A related resource in which the described resource is physically or logically included. {@en-US}",
+          "identifier": "dct:isPartOf"
+        }
+      ]
+    }
+  ]
+}

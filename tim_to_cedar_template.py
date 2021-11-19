@@ -3,7 +3,6 @@ import requests
 import configparser
 from properties import create_field, create_template, create_element
 
-# TODO options: config, data, template name, template description
 # TODO add schema:identifier
 # TODO make sure required works
 
@@ -11,50 +10,9 @@ config = configparser.ConfigParser()
 config.read('config.ini')
 
 api_key = config['cedar']['key']
-# folder = config['cedar']['folder']
-folder = None
-
-data = [
-    {
-        'name': 'BioSample',
-        'description': 'Data about a physical sample consisting of one or more cells taken from an organism (living or deceased) or derived from such a Sample.',
-        'identifier': 'https://datamodel.terra.bio/TerraCore#BioSample',
-        'fields': [
-            {
-                'name': 'donated',
-                'description': 'Whether or not it was donated',
-                'identifier': 'https://datamodel.terra.bio/TerraCore#donated'
-            },
-            {
-                'name': 'hasBioSampleType',
-                'description': 'Has a bio sample type',
-                'identifier': 'https://datamodel.terra.bio/TerraCore#hasBioSampleType'
-            },
-            {
-                'name': 'wasUsedBy',
-                'description': 'Was used by',
-                'identifier': 'https://datamodel.terra.bio/TerraCore#wasUsedBy'
-            }
-        ]
-    },
-    {
-        'name': 'Dataset',
-        'description': 'A set of data',
-        'identifier': 'https://datamodel.terra.bio/TerraCore#Dataset',
-        'fields': [
-            {
-                'name': 'hasDataUseLimitation',
-                'description': 'Has a limitation on data use',
-                'identifier': 'https://datamodel.terra.bio/TerraCore#hasDataUseLimitation'
-            },
-            {
-                'name': 'hasDataUseRequirement',
-                'description': 'Has a requirement for data use',
-                'identifier': 'https://datamodel.terra.bio/TerraCore#hasDataUseRequirement'
-            }
-        ]
-    }
-]
+folder = config['cedar']['folder']
+template_name = config['cedar']['template_name']
+template_description = config['cedar']['template_description']
 
 base_rest_url = 'https://resource.metadatacenter.org'
 field_validator_endpoint = '/command/validate?resource_type=field'
@@ -63,6 +21,7 @@ template_validator_endpoint = '/command/validate?resource_type=template'
 templates_endpoint = '/templates'
 template_fields_endpoint = '/template-fields'
 template_elements_endpoint = '/template-elements'
+folder_url = 'https://repo.metadatacenter.org/folders/{0}'.format(folder)
 
 
 def post_request(endpoint, property):
@@ -71,7 +30,7 @@ def post_request(endpoint, property):
         'Accept': 'application/json'
     }
     return requests.post(base_rest_url +
-                         endpoint, data=json.dumps(property), params={'folder_id': folder}, headers=headers)
+                         endpoint, data=json.dumps(property), params={'folder_id': folder_url}, headers=headers)
 
 
 def validate(endpoint, property):
@@ -97,7 +56,9 @@ def add_child_to_parent(parent, child, identifier):
     parent['required'].append(name)
 
 
-template_object = create_template('test-template', 'test-template-description')
+data = json.load(open('tim.json'))['tim']
+
+template_object = create_template(template_name, template_description)
 
 field_objects = []
 element_objects = []

@@ -1,0 +1,11 @@
+dct:identifier	xsd:anyURI, xsd:string		An unambiguous reference to the resource within a given context.
+rdfs:label	xsd:string		A human-readable name for the entity. [used in TIM for the short name of the project]
+dct:title	xsd:string		A name given to the resource. [used in TIM for the full title]
+TerraCore:hasCrossReference	xsd:anyURI, xsd:string		Reference to the entity in another electronic system.  The data stored about the entity may vary from system to system, but this relationship asserts that the reference represents the same entity.
+dct:description	xsd:string		An account of the resource.
+dct:contributor	dct:Agent		An entity responsible for making contributions to the resource.
+prov:wasAssociatedWith 	prov:Organization		
+TerraCore:isFundedBy 	prov:Organization		
+TerraDCAT_ap:hasOriginalPublication	xsd:anyURI, xsd:string		
+TerraDCAT_ap:hasPrincipalInvestigator	TerraCore:PrincipalInvestigator		A Principal Investigator associated with this entity.
+prov:generated	prov:Entity		Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.

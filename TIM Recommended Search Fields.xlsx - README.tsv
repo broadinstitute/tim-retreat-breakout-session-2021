@@ -1,0 +1,26 @@
+This document identifies recommended metadata fields to enable some cross-dataset search, based on the Terra Interoperability Model.  This list is manually generated and thus may not be fully up-to-date.		
+https://github.com/DataBiosphere/terra-interoperability-model 		
+		
+Notes	Age is a separate entity type in the Terra Interoperability Model; the Age properties appear flattened within the parent entity (Donor and BioSample) in this document. Note: it doesn't seem necessary in retrospect to record the donor's age but only the donor's age at the time of some event .. donorAgeAtDiagnosis, donorAgeAtCollection, donor age when test was administered or the last time we verified life status.  We might also want to know if the patient is available for follow up. 	
+	OntologyReference is a temporary entity type which allows us to capture the ontology, ontology id, and ontology term when an ontology reference is used.  This allows us to maintain the information that could be provided by a vocabulary server which would look this information up at runtime.	
+		
+Entity name	Definition	
+TerraDCAT_ap:Dataset	An extension of DCAT:Dataset to support Data Use Ontology terms.  A collection of one or more entities submitted by a single responsible party or authorizing agent.	
+TerraCore:Donor	An organism from which a sample or test result is available	
+TerraCore:HumanDonor	Extension of Donor class for Humans.	rdfs:subClassOf TerraCore:Donor
+TerraCore:BioSample	Data about a physical sample consisting of one or more cells taken from an organism (living or deceased) or derived from such a Sample.	
+TerraCore:Project	A collective effort with an objective related to biomedical research.	
+TerraCore:SingleCell	Data about a physical sample consisting of a single cell or nucleus taken from an organism (living or deceased) or derived from such a Sample.	rdfs:subClassOf TerraCore:BioSample
+TerraCore:File	A file is an information-bearing electronic object that contains a physical embodiment of some information using a particular character encoding.	
+TerraCore:ReferenceAssembly	Instances should include either a cross reference to the reference sequence or an official GRCName from the Genome Reference Consortium, or both.	
+		
+Entity definitions to be added		
+prov:Organization		
+prov:Person		
+TerraCore:Disease		
+TerraCore:OntologyReference		
+TerraCore:MedicalHistory		
+TerraCore:Diagnosis		
+TerraCore:Assay		
+		
+Mutation/variant	Will this be the output of a specific analysis pipelin that reports the variants identified within a sample based on a pre-defined threshold?  We can always find all mutations by examining a variant call file but this is intended to provide a less labor-intensive search for significant mutations.	

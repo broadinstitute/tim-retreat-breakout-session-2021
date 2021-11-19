@@ -1,0 +1,26 @@
+dct:identifier	xsd:anyURI, xsd:string		An unambiguous reference to the resource within a given context.
+rdfs:label	xsd:string		A human-readable name for the entity
+TerraCore:hasCrossReference	xsd:anyURI, xsd:string		Reference to the entity in another electronic system.  The data stored about the entity may vary from system to system, but this relationship asserts that the reference represents the same entity.
+dc:title			A name given to the resource.
+dc:description			An account of the resource.
+dct:conformsTo		https://datamodel.terra.bio/TerraCore	An established standard to which the described resource conforms.
+dcat:contactPoint			Relevant contact information for the catalogued resource. Use of vCard is recommended. {@en}
+TerraDCAT_ap:hasOwner			The entity responsible for making the item available and responsible for identifying authorized users of the Dataset or DataCollection.
+TerraDCAT_ap:hasDataUsePermission			
+dcat:keyword			
+dct:contributor			
+dct:license			
+prov:wasAssociatedWith 	prov:Organization		
+prov:wasGeneratedBy 			
+TerraCore:hasDataModality	TerraCore:DataModality		Data modality describes the biological nature of the information gathered as the result of an Activity, independent of the technology or methods used to produce the information.
+TerraCore:isFundedBy 	prov:Organization		
+TerraDCAT_ap:hasOriginalPublication			
+TerraDCAT_ap:isPrincipalInvestigator	prov:Person		
+TerraDCAT_ap:hasDataUseModifier			
+dct:issued			
+dct:modified			
+TerraDCAT_ap:hasCustodian			
+dc:creator 	prov:Person		
+TerraDCAT_ap:hasDataSnapshot	TerraDCAT_ap:DataSnapshot		An available distribution of the Dataset. 
+dct:hasPart			A related resource that is included either physically or logically in the described resource. {@en-US}
+dct:isPartOf 	TerraDCAT_ap:DataCollection		A related resource in which the described resource is physically or logically included. {@en-US}
