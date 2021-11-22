@@ -1,3 +1,6 @@
 __pycache__
 config.ini
 .DS_Store
+credentials.json
+token.json
+sheets.googleapis.com-python.json

@@ -3,7 +3,7 @@
     {
       "name": "Project",
       "description": "A collective effort with an objective related to biomedical research.",
-      "identifier": "https://datamodel.terra.bio/TerraCore#Project",
+      "identifier": "TerraCore#Project",
       "fields": [
         {
           "name": "identifier",
@@ -23,7 +23,7 @@
         {
           "name": "hasCrossReference",
           "description": "Reference to the entity in another electronic system.  The data stored about the entity may vary from system to system, but this relationship asserts that the reference represents the same entity.",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasCrossReference"
+          "identifier": "TerraCore#hasCrossReference"
         },
         {
           "name": "description",
@@ -43,7 +43,7 @@
         {
           "name": "isFundedBy",
           "description": "",
-          "identifier": "https://datamodel.terra.bio/TerraCore#isFundedBy"
+          "identifier": "TerraCore#isFundedBy"
         },
         {
           "name": "hasOriginalPublication",
@@ -65,7 +65,7 @@
     {
       "name": "Donor",
       "description": "An organism from which a sample or test result is available.",
-      "identifier": "https://datamodel.terra.bio/TerraCore#Donor",
+      "identifier": "TerraCore#Donor",
       "fields": [
         {
           "name": "identifier",
@@ -80,52 +80,52 @@
         {
           "name": "hasCrossReference",
           "description": "Reference to the entity in another electronic system.  The data stored about the entity may vary from system to system, but this relationship asserts that the reference represents the same entity.",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasCrossReference"
+          "identifier": "TerraCore#hasCrossReference"
         },
         {
           "name": "hasDiagnosis",
           "description": "",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasDiagnosis"
+          "identifier": "TerraCore#hasDiagnosis"
         },
         {
           "name": "hasDisease",
           "description": "A property that identifies a disease or condition has been reported in this entity.",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasDisease"
+          "identifier": "TerraCore#hasDisease"
         },
         {
           "name": "hasEthnicity",
           "description": "",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasEthnicity"
+          "identifier": "TerraCore#hasEthnicity"
         },
         {
           "name": "hasMedicalHistory",
           "description": "",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasMedicalHistory"
+          "identifier": "TerraCore#hasMedicalHistory"
         },
         {
           "name": "hasOrganismType",
           "description": "A reference to the organism type.",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasOrganismType"
+          "identifier": "TerraCore#hasOrganismType"
         },
         {
           "name": "hasRace",
           "description": "A property that relects a HumanDonor's reported race.",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasRace"
+          "identifier": "TerraCore#hasRace"
         },
         {
           "name": "hasGenotypicSex",
           "description": "A biological sex quality inhering in an individual based upon genotypic composition of sex chromosomes. [PATO]",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasGenotypicSex"
+          "identifier": "TerraCore#hasGenotypicSex"
         },
         {
           "name": "hasPhenotypicSex",
           "description": "A reference to the BiologicalSex of the Donor organism.",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasPhenotypicSex"
+          "identifier": "TerraCore#hasPhenotypicSex"
         },
         {
           "name": "hasSexAssignedAtBirth",
           "description": "A reference to the BiologicalSex assigned to the donor organism at birth by a medical professional.",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasSexAssignedAtBirth"
+          "identifier": "TerraCore#hasSexAssignedAtBirth"
         },
         {
           "name": "Age_hasAgeUnit",
@@ -162,7 +162,7 @@
     {
       "name": "BioSample",
       "description": "Data about a physical sample consisting of one or more cells taken from an organism (living or deceased) or derived from such a Sample.",
-      "identifier": "https://datamodel.terra.bio/TerraCore#BioSample",
+      "identifier": "TerraCore#BioSample",
       "fields": [
         {
           "name": "identifier",
@@ -177,47 +177,47 @@
         {
           "name": "hasCrossReference",
           "description": "Reference to the entity in another electronic system.  The data stored about the entity may vary from system to system, but this relationship asserts that the reference represents the same entity.",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasCrossReference"
+          "identifier": "TerraCore#hasCrossReference"
         },
         {
           "name": "hasBioSampleType",
           "description": "",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasBioSampleType"
+          "identifier": "TerraCore#hasBioSampleType"
         },
         {
           "name": "wasDerivedFrom",
           "description": "",
-          "identifier": "https://datamodel.terra.bio/TerraCore#wasDerivedFrom"
+          "identifier": "TerraCore#wasDerivedFrom"
         },
         {
           "name": "hasDisease",
           "description": "A property that identifies a disease or condition has been reported in this entity.",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasDisease"
+          "identifier": "TerraCore#hasDisease"
         },
         {
           "name": "hasDevelopmentalStage",
           "description": "",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasDevelopmentalStage"
+          "identifier": "TerraCore#hasDevelopmentalStage"
         },
         {
           "name": "hasDataCollected",
           "description": "Date the BioSample was originally collected from its Donor.",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasDataCollected"
+          "identifier": "TerraCore#hasDataCollected"
         },
         {
           "name": "hasPreservationState",
           "description": "",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasPreservationState"
+          "identifier": "TerraCore#hasPreservationState"
         },
         {
           "name": "hasAnatomicalSite",
           "description": "A reference to the site within the organism from which the BioSample was taken.",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasAnatomicalSite"
+          "identifier": "TerraCore#hasAnatomicalSite"
         },
         {
           "name": "hasSelectedCellType",
           "description": "",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasSelectedCellType"
+          "identifier": "TerraCore#hasSelectedCellType"
         },
         {
           "name": "wasUsedBy",
@@ -252,7 +252,7 @@
         {
           "name": "hasDonor",
           "description": "This property references the Donor organism from which the BioSample was acquired.",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasDonor"
+          "identifier": "TerraCore#hasDonor"
         },
         {
           "name": "isPartOf",
@@ -264,7 +264,7 @@
     {
       "name": "Project",
       "description": "A collective effort with an objective related to biomedical research.",
-      "identifier": "https://datamodel.terra.bio/TerraCore#Project",
+      "identifier": "TerraCore#Project",
       "fields": [
         {
           "name": "identifier",
@@ -284,7 +284,7 @@
         {
           "name": "hasCrossReference",
           "description": "Reference to the entity in another electronic system.  The data stored about the entity may vary from system to system, but this relationship asserts that the reference represents the same entity.",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasCrossReference"
+          "identifier": "TerraCore#hasCrossReference"
         },
         {
           "name": "description",
@@ -304,7 +304,7 @@
         {
           "name": "isFundedBy",
           "description": "",
-          "identifier": "https://datamodel.terra.bio/TerraCore#isFundedBy"
+          "identifier": "TerraCore#isFundedBy"
         },
         {
           "name": "hasOriginalPublication",
@@ -326,7 +326,7 @@
     {
       "name": "Dataset",
       "description": "An extension of DCAT:Dataset to support Data Use Ontology terms. A collection of one or more entities submitted by a single responsible party or authorizing agent.",
-      "identifier": "https://datamodel.terra.bio/TerraCore#Dataset",
+      "identifier": "TerraCore#Dataset",
       "fields": [
         {
           "name": "identifier",
@@ -341,7 +341,7 @@
         {
           "name": "hasCrossReference",
           "description": "Reference to the entity in another electronic system.  The data stored about the entity may vary from system to system, but this relationship asserts that the reference represents the same entity.",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasCrossReference"
+          "identifier": "TerraCore#hasCrossReference"
         },
         {
           "name": "title",
@@ -401,12 +401,12 @@
         {
           "name": "hasDataModality",
           "description": "Data modality describes the biological nature of the information gathered as the result of an Activity, independent of the technology or methods used to produce the information.",
-          "identifier": "https://datamodel.terra.bio/TerraCore#hasDataModality"
+          "identifier": "TerraCore#hasDataModality"
         },
         {
           "name": "isFundedBy",
           "description": "",
-          "identifier": "https://datamodel.terra.bio/TerraCore#isFundedBy"
+          "identifier": "TerraCore#isFundedBy"
         },
         {
           "name": "hasOriginalPublication",
