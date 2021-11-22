@@ -3,6 +3,11 @@ python3 tim_to_spreadsheet.py \
     credentials.json \
     1BO80MKYb5QitdG_DGlGE9TP6JYCQvwr0-Q9E-mrAUt0 \
     tim.json
+
+Where credentials.json is obtained from the broad-epi-dev project.
+The second parameter is the google spreadsheet ID.
+
+pygsheets reference: https://pygsheets.readthedocs.io/en/latest/reference.html
 '''
 
 import sys
@@ -19,6 +24,7 @@ tim = sys.argv[3]
 
 tim = json.load(open(tim))['tim']
 
+# Triggers OAuth flow
 gc = pygsheets.authorize(credentials)
 sheet = gc.open_by_key(sheet_id)
 
