@@ -262,68 +262,6 @@
       ]
     },
     {
-      "name": "Project",
-      "description": "A collective effort with an objective related to biomedical research.",
-      "identifier": "TerraCore#Project",
-      "fields": [
-        {
-          "name": "identifier",
-          "description": "An unambiguous reference to the resource within a given context.",
-          "identifier": "dct:identifier"
-        },
-        {
-          "name": "label",
-          "description": "A human-readable name for the entity. [used in TIM for the short name of the project]",
-          "identifier": "rdfs:label"
-        },
-        {
-          "name": "title",
-          "description": "A name given to the resource. [used in TIM for the full title]",
-          "identifier": "dct:title"
-        },
-        {
-          "name": "hasCrossReference",
-          "description": "Reference to the entity in another electronic system.  The data stored about the entity may vary from system to system, but this relationship asserts that the reference represents the same entity.",
-          "identifier": "TerraCore#hasCrossReference"
-        },
-        {
-          "name": "description",
-          "description": "An account of the resource.",
-          "identifier": "dct:description"
-        },
-        {
-          "name": "contributor",
-          "description": "An entity responsible for making contributions to the resource.",
-          "identifier": "dct:contributor"
-        },
-        {
-          "name": "wasAssociatedWith",
-          "description": "",
-          "identifier": "prov:wasAssociatedWith"
-        },
-        {
-          "name": "isFundedBy",
-          "description": "",
-          "identifier": "TerraCore#isFundedBy"
-        },
-        {
-          "name": "hasOriginalPublication",
-          "description": "",
-          "identifier": "TerraDCAT_ap:hasOriginalPublication"
-        },
-        {
-          "name": "hasPrincipalInvestigator",
-          "description": "A Principal Investigator associated with this entity.",
-          "identifier": "TerraDCAT_ap:hasPrincipalInvestigator"
-        },
-        {
-          "name": "generated",
-          "description": "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.",
-          "identifier": "prov:generated"
-        }
-      ]
-    },
-    {
       "name": "Dataset",
       "description": "An extension of DCAT:Dataset to support Data Use Ontology terms. A collection of one or more entities submitted by a single responsible party or authorizing agent.",
       "identifier": "TerraCore#Dataset",
