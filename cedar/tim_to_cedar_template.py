@@ -1,3 +1,11 @@
+'''Requirements
+
+- python3
+- a config file called config.ini with your CEDAR API key
+  and the CEDAR folder in which entities will be created
+  - see sample_config.ini for formatting
+'''
+
 import json
 import requests
 import configparser

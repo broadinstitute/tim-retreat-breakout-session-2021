@@ -16,6 +16,7 @@ import pygsheets
 
 
 NUM_ROWS = 20
+CELL_COLOR = (223 / 255., 227 / 255., 235 / 255.)
 
 
 credentials = sys.argv[1]
@@ -40,6 +41,7 @@ for element in tim:
     for field in element['fields']:
         print('\tAdding {0}'.format(field['name']))
         cell.note = field['description']
+        cell.color = CELL_COLOR
         cell.set_value(field['identifier'])
         cell.set_text_format('bold', True)
         try:
