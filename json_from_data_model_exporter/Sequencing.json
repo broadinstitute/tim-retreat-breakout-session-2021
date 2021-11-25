@@ -1,0 +1,52 @@
+{
+  "$id": "https://datamodel.terra.bio/TerraCore#Sequencing",
+  "description": "An activity that produces an electronic record of a genetic sequence from a Sample",
+  "$schema": "http://json-schema.org/draft-07/schema#/",
+  "definitions": {},
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "rdfs:label": {
+      "type": "string",
+      "description": "A human-readable name for the entity."
+    },
+    "id": {
+         "type": "string", 
+         "description": "UUID for this entity." 
+    },
+    "describedBy": {
+      "type": "string",
+      "description": "The URL reference to the JSON Schema that defines this object."
+    },
+    "prov:generated": {
+      "type": "array",
+      "items": { "$ref": "TerraCore:SequenceFile" },
+      "minItems": 0,
+      "description": "http://www.w3.org/ns/prov#generated"
+    },
+    "TerraCore:usesSample": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "https://datamodel.terra.bio/TerraCore#usesSample"
+    },
+    "TerraCore:usesReferenceAssembly": {
+      "type": "string",
+      "title": "usesReferenceAssembly",
+      "comment": "Still in draft",
+      "skos:prefLabel": "usesReferenceAssembly",
+      "rdfs:PropertyOf": [{ "$ref": "prov:used" }],
+      "description": "https://datamodel.terra.bio/TerraCore#usesReferenceAssembly"
+    },
+    "TerraCore:usesLibrary": {
+      "type": "string",
+      "title": "usesLibrary",
+      "rdfs:PropertyOf": [{ "$ref": "prov:used" }],
+      "description": "https://datamodel.terra.bio/TerraCore#usesLibrary"
+    }
+  },
+  "required": [],
+  "title": "Sequencing",
+  "rdfs:subClassOf": ["TerraCore:Activity"],
+  "skos:prefLabel": "Sequencing"
+}
