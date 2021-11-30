@@ -1,1 +1,89 @@
-{"$id": "https://datamodel.terra.bio/TerraCore#File", "description": "A file is an information-bearing electronic object that contains a physical embodiment of some information using a particular character encoding.", "$schema": "http://json-schema.org/draft-07/schema#/", "definitions": {}, "type": "object", "additionalProperties": true, "properties": {"rdfs:label": {"type": "string", "description": "A human-readable name for the entity."}, "id": {"type": "string", "description": "UUID for this entity."}, "describedBy": {"type": "string", "description": "The URL reference to the JSON Schema that defines this object."}, "TerraCore:hasCrossReference": {"type": "array", "items": {"type": "string"}, "minItems": 0, "description": "https://datamodel.terra.bio/TerraCore#hasCrossReference"}, "TerraCore:hasChecksum": {"type": "array", "items": {"type": "string"}, "title": "hasChecksum", "skos:prefLabel": "hasChecksum", "minItems": 0, "description": "https://datamodel.terra.bio/TerraCore#hasChecksum"}, "dcat:byteSize": {"type": "string", "description": "http://www.w3.org/ns/dcat#byteSize"}, "TerraCore:hasFileFormat": {"type": "string", "title": "hasFileFormat", "comment": "Indicate the full file extension including compression extensions; this follows the HCA convention.", "rdfs:PropertyOf": [{"$ref": "dct:format"}], "description": "https://datamodel.terra.bio/TerraCore#hasFileFormat"}, "TerraCore:hasEstimatedLibrarySize": {"type": "string", "title": "hasEstimatedLibrarySize", "comment": "For alignment file types.", "skos:prefLabel": "hasEstimatedLibrarySize", "description": "https://datamodel.terra.bio/TerraCore#hasEstimatedLibrarySize"}, "TerraCore:hasDataModality": {"type": "string", "title": "hasDataModality", "description": "https://datamodel.terra.bio/TerraCore#hasDataModality"}, "TerraCore:hasDataUseRequirement": {"type": "string", "description": "https://datamodel.terra.bio/TerraCore#hasDataUseRequirement"}, "TerraCore:hasDataUseLimitation": {"type": "string", "description": "https://datamodel.terra.bio/TerraCore#hasDataUseLimitation"}, "TerraCore:hasDuplicateFragments": {"type": "string", "title": "hasDuplicateFragments", "comment": "For alignment data types.", "skos:prefLabel": "hasDuplicateFragments", "description": "https://datamodel.terra.bio/TerraCore#hasDuplicateFragments"}, "TerraCore:hasFragments": {"type": "string", "title": "hasFragments", "comment": "For alignment file types.", "skos:prefLabel": "hasFragments", "description": "https://datamodel.terra.bio/TerraCore#hasFragments"}, "TerraCore:hasAlignedFragments": {"type": "string", "title": "hasAlignedFragments", "comment": "For alignment file types.", "skos:prefLabel": "hasAlignedFragments", "description": "https://datamodel.terra.bio/TerraCore#hasAlignedFragments"}}, "required": ["dcat:byteSize", "TerraCore:hasFileFormat"], "title": "File", "rdfs:subClassOf": ["obo:IAO_0000030"], "skos:prefLabel": "File"}
+{
+  "$id": "https://datamodel.terra.bio/TerraCore#File",
+  "description": "A file is an information-bearing electronic object that contains a physical embodiment of some information using a particular character encoding.",
+  "$schema": "http://json-schema.org/draft-07/schema#/",
+  "definitions": {},
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "rdfs:label": {
+      "type": "string",
+      "description": "A human-readable name for the entity."
+    },
+    "id": { "type": "string", "description": "UUID for this entity." },
+    "describedBy": {
+      "type": "string",
+      "description": "The URL reference to the JSON Schema that defines this object."
+    },
+    "TerraCore:hasCrossReference": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 0,
+      "description": "https://datamodel.terra.bio/TerraCore#hasCrossReference"
+    },
+    "TerraCore:hasChecksum": {
+      "type": "array",
+      "items": { "type": "string" },
+      "title": "hasChecksum",
+      "skos:prefLabel": "hasChecksum",
+      "minItems": 0,
+      "description": "https://datamodel.terra.bio/TerraCore#hasChecksum"
+    },
+    "dcat:byteSize": {
+      "type": "string",
+      "description": "http://www.w3.org/ns/dcat#byteSize"
+    },
+    "TerraCore:hasFileFormat": {
+      "type": "string",
+      "title": "hasFileFormat",
+      "comment": "Indicate the full file extension including compression extensions; this follows the HCA convention.",
+      "rdfs:PropertyOf": [{ "$ref": "dct:format" }],
+      "description": "https://datamodel.terra.bio/TerraCore#hasFileFormat"
+    },
+    "TerraCore:hasEstimatedLibrarySize": {
+      "type": "string",
+      "title": "hasEstimatedLibrarySize",
+      "comment": "For alignment file types.",
+      "skos:prefLabel": "hasEstimatedLibrarySize",
+      "description": "https://datamodel.terra.bio/TerraCore#hasEstimatedLibrarySize"
+    },
+    "TerraCore:hasDataModality": {
+      "type": "string",
+      "title": "hasDataModality",
+      "description": "https://datamodel.terra.bio/TerraCore#hasDataModality"
+    },
+    "TerraCore:hasDataUseRequirement": {
+      "type": "string",
+      "description": "https://datamodel.terra.bio/TerraCore#hasDataUseRequirement"
+    },
+    "TerraCore:hasDataUseLimitation": {
+      "type": "string",
+      "description": "https://datamodel.terra.bio/TerraCore#hasDataUseLimitation"
+    },
+    "TerraCore:hasDuplicateFragments": {
+      "type": "string",
+      "title": "hasDuplicateFragments",
+      "comment": "For alignment data types.",
+      "skos:prefLabel": "hasDuplicateFragments",
+      "description": "https://datamodel.terra.bio/TerraCore#hasDuplicateFragments"
+    },
+    "TerraCore:hasFragments": {
+      "type": "string",
+      "title": "hasFragments",
+      "comment": "For alignment file types.",
+      "skos:prefLabel": "hasFragments",
+      "description": "https://datamodel.terra.bio/TerraCore#hasFragments"
+    },
+    "TerraCore:hasAlignedFragments": {
+      "type": "string",
+      "title": "hasAlignedFragments",
+      "comment": "For alignment file types.",
+      "skos:prefLabel": "hasAlignedFragments",
+      "description": "https://datamodel.terra.bio/TerraCore#hasAlignedFragments"
+    }
+  },
+  "required": ["dcat:byteSize", "TerraCore:hasFileFormat"],
+  "title": "File",
+  "rdfs:subClassOf": ["obo:IAO_0000030"],
+  "skos:prefLabel": "File"
+}

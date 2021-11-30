@@ -1,1 +1,46 @@
-{"$id": "https://datamodel.terra.bio/TerraCore#Antibody", "description": "", "$schema": "http://json-schema.org/draft-07/schema#/", "definitions": {}, "type": "object", "additionalProperties": true, "properties": {"rdfs:label": {"type": "string", "description": "A human-readable name for the entity."}, "id": {"type": "string", "description": "UUID for this entity."}, "describedBy": {"type": "string", "description": "The URL reference to the JSON Schema that defines this object."}, "TerraCore:hasHostOrganism": {"type": "string", "description": "https://datamodel.terra.bio/TerraCore#hasHostOrganism"}, "TerraCore:hasClonality": {"type": "array", "items": {"type": "string"}, "title": "hasClonality", "minItems": 1, "oneOf": ["monoclonal", "polyclonal"], "description": "https://datamodel.terra.bio/TerraCore#hasClonality"}, "TerraCore:hasTarget": {"type": "array", "items": {"type": "string"}, "title": "hasTarget", "comment": "Target is a string for now but will ultimately be a class.", "skos:prefLabel": "hasTarget", "minItems": 1, "description": "https://datamodel.terra.bio/TerraCore#hasTarget"}}, "required": ["TerraCore:hasHostOrganism"], "title": "Antibody", "rdfs:subClassOf": ["obo:BFO_0000040"]}
+{
+  "$id": "https://datamodel.terra.bio/TerraCore#Antibody",
+  "description": "",
+  "$schema": "http://json-schema.org/draft-07/schema#/",
+  "definitions": {},
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "rdfs:label": {
+      "type": "string",
+      "description": "A human-readable name for the entity."
+    },
+    "id": { 
+        "type": "string", 
+        "description": "UUID for this entity." 
+    },
+    "describedBy": {
+      "type": "string",
+      "description": "The URL reference to the JSON Schema that defines this object."
+    },
+    "TerraCore:hasHostOrganism": {
+      "type": "string",
+      "description": "https://datamodel.terra.bio/TerraCore#hasHostOrganism"
+    },
+    "TerraCore:hasClonality": {
+      "type": "array",
+      "items": { "type": "string" },
+      "title": "hasClonality",
+      "minItems": 1,
+      "oneOf": ["monoclonal", "polyclonal"],
+      "description": "https://datamodel.terra.bio/TerraCore#hasClonality"
+    },
+    "TerraCore:hasTarget": {
+      "type": "array",
+      "items": { "type": "string" },
+      "title": "hasTarget",
+      "comment": "Target is a string for now but will ultimately be a class.",
+      "skos:prefLabel": "hasTarget",
+      "minItems": 1,
+      "description": "https://datamodel.terra.bio/TerraCore#hasTarget"
+    }
+  },
+  "required": ["TerraCore:hasHostOrganism"],
+  "title": "Antibody",
+  "rdfs:subClassOf": ["obo:BFO_0000040"]
+}
