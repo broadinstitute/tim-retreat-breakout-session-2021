@@ -1,0 +1,156 @@
+{
+  "$id": "https://datamodel.terra.bio/TerraDCAT_ap#Dataset",
+  "description": "An extension of DCAT:Dataset to support Data Use Ontology terms.  A collection of one or more entities submitted by a single responsible party or authorizing agent.",
+  "$schema": "http://json-schema.org/draft-07/schema#/",
+  "definitions": {},
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "rdfs:label": {
+      "type": "string",
+      "description": "A human-readable name for the entity."
+    },
+    "id": { "type": "string", "description": "UUID for this entity." },
+    "describedBy": {
+      "type": "string",
+      "description": "The URL reference to the JSON Schema that defines this object."
+    },
+    "TerraDCAT_ap:hasDataUseModifier": {
+      "type": "array",
+      "items": { "type": "string" },
+      "title": "hasDataUseModifier",
+      "skos:prefLabel": "hasDataUseModifier",
+      "minItems": 0,
+      "description": "The Data Use Ontology term to indicate conditions for use of the data."
+    },
+    "prov:wasGeneratedBy": {
+      "type": "array",
+      "items": { "$ref": "prov:Activity" },
+      "minItems": 0,
+      "description": "http://www.w3.org/ns/prov#wasGeneratedBy"
+    },
+    "TerraDCAT_ap:hasPrincipalInvestigator": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 0,
+      "description": "https://datamodel.terra.bio/TerraDCAT_ap#hasPrincipalInvestigator"
+    },
+    "dct:publisher": {
+      "type": "string",
+      "description": "http://purl.org/dc/terms/publisher"
+    },
+    "dct:isPartOf": {
+      "type": "array",
+      "items": { "$ref": "TerraDCAT_ap:DataCollection" },
+      "minItems": 0,
+      "description": "http://purl.org/dc/terms/isPartOf"
+    },
+    "dct:title": {
+      "type": "string",
+      "description": "http://purl.org/dc/terms/title"
+    },
+    "dct:accrualPeriodicity": {
+      "type": "array",
+      "items": { "type": "string" },
+      "maxItems": 1,
+      "description": "http://purl.org/dc/terms/accrualPeriodicity"
+    },
+    "dcat:landingPage": {
+      "type": "array",
+      "items": { "type": "string" },
+      "maxItems": 1,
+      "description": "http://www.w3.org/ns/dcat#landingPage"
+    },
+    "dct:creator": {
+      "type": "string",
+      "description": "http://purl.org/dc/terms/creator"
+    },
+    "dcat:contactPoint": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 0,
+      "description": "http://www.w3.org/ns/dcat#contactPoint"
+    },
+    "dcat:theme": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "http://www.w3.org/ns/dcat#theme"
+    },
+    "dct:issued": {
+      "type": "string",
+      "description": "http://purl.org/dc/terms/issued"
+    },
+    "TerraDCAT_ap:hasDataSnapshot": {
+      "type": "array",
+      "items": { "type": "string" },
+      "title": "hasDataSnapshot",
+      "skos:prefLabel": "hasDataSnapshot",
+      "minItems": 0,
+      "rdfs:PropertyOf": [{ "$ref": "dcat:distribution" }],
+      "description": "An available distribution of the Dataset. "
+    },
+    "dct:license": {
+      "type": "array",
+      "items": { "type": "string" },
+      "maxItems": 1,
+      "description": "http://purl.org/dc/terms/license"
+    },
+    "dct:hasPart": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 0,
+      "description": "http://purl.org/dc/terms/hasPart"
+    },
+    "dct:modified": {
+      "type": "string",
+      "description": "http://purl.org/dc/terms/modified"
+    },
+    "dct:conformsTo": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 0,
+      "description": "http://purl.org/dc/terms/conformsTo"
+    },
+    "dct:identifier": {
+      "type": "string",
+      "description": "http://purl.org/dc/terms/identifier"
+    },
+    "TerraDCAT_ap:hasDataUsePermission": {
+      "type": "string",
+      "title": "hasDataUseLimitation",
+      "skos:prefLabel": "hasDataUsePermission",
+      "description": "The Data Use Ontology term to indicate consent permissions for the use of the data."
+    },
+    "TerraDCAT_ap:hasOriginalPublication": {
+      "type": "string",
+      "title": "hasOriginalPublication",
+      "rdfs:PropertyOf": [{ "$ref": "dct:isReferencedBy" }],
+      "description": "The original publication associated with this Dataset or DataCollection."
+    },
+    "TerraDCAT_ap:hasOwner": {
+      "type": "string",
+      "title": "hasOwner",
+      "rdfs:PropertyOf": [{ "$ref": "dct:publisher" }],
+      "description": "The entity responsible for making the item available and responsible for identifying authorized users of the Dataset or DataCollection."
+    },
+    "TerraDCAT_ap:hasCustodian": {
+      "type": "string",
+      "title": "hasCustodian",
+      "rdfs:PropertyOf": [{ "$ref": "dct:publisher" }],
+      "description": "The entity operationally responsible for managing the item and responsible for authorizing users of the Dataset or DataCollection."
+    }
+  },
+  "required": [
+    "dct:publisher",
+    "dct:title",
+    "dct:creator",
+    "dct:issued",
+    "dct:modified",
+    "dct:identifier",
+    "TerraDCAT_ap:hasDataUsePermission"
+  ],
+  "title": "Dataset",
+  "rdfs:subClassOf": ["dcat:Dataset"],
+  "skos:prefLabel": "Dataset"
+}

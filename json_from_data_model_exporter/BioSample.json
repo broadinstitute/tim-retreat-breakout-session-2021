@@ -1,0 +1,160 @@
+{
+  "$id": "https://datamodel.terra.bio/TerraCore#BioSample",
+  "description": "Data about a physical sample consisting of one or more cells taken from an organism (living or deceased) or derived from such a Sample.",
+  "$schema": "http://json-schema.org/draft-07/schema#/",
+  "definitions": {},
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "rdfs:label": {
+      "type": "string",
+      "description": "A human-readable name for the entity."
+    },
+    "id": { "type": "string", "description": "UUID for this entity." },
+    "describedBy": {
+      "type": "string",
+      "description": "The URL reference to the JSON Schema that defines this object."
+    },
+    "prov:wasUsedBy": {
+      "type": "array",
+      "items": { "$ref": "TerraCore:Activity" },
+      "minItems": 1,
+      "description": "http://www.w3.org/ns/prov#wasUsedBy"
+    },
+    "TerraCore:hasBioSampleType": {
+      "type": "string",
+      "title": "hasBioSampleType",
+      "rdfs:PropertyOf": [{ "$ref": "TerraCore:hasSampleType" }],
+      "description": "https://datamodel.terra.bio/TerraCore#hasBioSampleType"
+    },
+    "dct:source": {
+      "type": "array",
+      "items": { "type": "string" },
+      "maxItems": 1,
+      "description": "http://purl.org/dc/terms/source"
+    },
+    "TerraCore:hasCrossReference": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 0,
+      "description": "https://datamodel.terra.bio/TerraCore#hasCrossReference"
+    },
+    "TerraCore:hasPreservationState": {
+      "type": "array",
+      "items": { "type": "string" },
+      "title": "hasPreservationState",
+      "maxItems": 1,
+      "oneOf": [
+        "Cryopreserved",
+        "FFPE",
+        "Fresh",
+        "Frozen",
+        "OCT-embedded",
+        "Snap Frozen"
+      ],
+      "description": "Method used to preserve the BioSample, if relevant, or Fresh for BioSamples that were not preserved."
+    },
+    "TerraCore:hasAnatomicalSite": {
+      "type": "array",
+      "items": { "type": "string" },
+      "title": "hasAnatomicalSite",
+      "comment": "May want to consider restricting this to UBERON terms but currently any URI is allowed.",
+      "skos:prefLabel": "hasAnatomicalSite",
+      "maxItems": 1,
+      "description": "A reference to the site within the organism from which the BioSample was taken."
+    },
+    "TerraCore:hasDonorAge": {
+      "type": "array",
+      "items": { "type": "string" },
+      "title": "hasDonorAge",
+      "skos:prefLabel": "hasDonorAge",
+      "minItems": 0,
+      "description": "A reference to the Age of the Donor at the point in time that the BioSample was obtained."
+    },
+    "TerraCore:hasDonor": {
+      "type": "array",
+      "items": { "type": "string" },
+      "title": "hasDonor",
+      "skos:prefLabel": "hasDonor",
+      "minItems": 1,
+      "description": "This property references the Donor organism from which the BioSample was acquired."
+    },
+    "prov:wasDerivedFrom": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 0,
+      "description": "http://www.w3.org/ns/prov#wasDerivedFrom"
+    },
+    "TerraCore:hasAssay": {
+      "type": "string",
+      "title": "hasAssay",
+      "skos:prefLabel": "hasAssay",
+      "rdfs:PropertyOf": [{ "$ref": "prov:wasUsedBy" }],
+      "description": "https://datamodel.terra.bio/TerraCore#hasAssay"
+    },
+    "TerraCore:hasDisease": {
+      "type": "string",
+      "title": "hasDisease",
+      "skos:prefLabel": "hasDisease",
+      "description": "A property that identifies a disease or condition exhibited in the BioSample."
+    },
+    "TerraCore:hasSequencing": {
+      "type": "string",
+      "title": "hasSequencing",
+      "skos:prefLabel": "hasSequencing",
+      "rdfs:PropertyOf": [{ "$ref": "prov:wasUsedBy" }],
+      "description": "https://datamodel.terra.bio/TerraCore#hasSequencing"
+    },
+    "TerraCore:hasTumorNormalIndicator": {
+      "type": "string",
+      "title": "hasTumorNormalIndicator",
+      "description": "https://datamodel.terra.bio/TerraCore#hasTumorNormalIndicator"
+    },
+    "TerraCore:hasPairedTumor": {
+      "type": "string",
+      "title": "hasPairedTumor",
+      "description": "https://datamodel.terra.bio/TerraCore#hasPairedTumor"
+    },
+    "TerraCore:hasAge": {
+      "type": "string",
+      "title": "hasAge",
+      "skos:prefLabel": "hasAge",
+      "description": "A reference to the Age of the Donor at the point in time that data was collected or that the BioSample was obtained."
+    },
+    "TerraCore:hasPrimaryMetastaticIndicator": {
+      "type": "string",
+      "title": "hasPrimaryMetastaticIndicator",
+      "description": "https://datamodel.terra.bio/TerraCore#hasPrimaryMetastaticIndicator"
+    },
+    "TerraCore:hasDateCollected": {
+      "type": "string",
+      "title": "has date collected",
+      "skos:prefLabel": "has date collected",
+      "rdfs:PropertyOf": [{ "$ref": "dct:date" }],
+      "description": "Date the BioSample was originally collected from its Donor."
+    },
+    "TerraCore:hasDevelopmentalStage": {
+      "type": "string",
+      "title": "hasDevelopmentalStage",
+      "skos:prefLabel": "hasDevelopmentalStage",
+      "description": "https://datamodel.terra.bio/TerraCore#hasDevelopmentalStage"
+    },
+    "TerraCore:hasLibraryPrep": {
+      "type": "string",
+      "title": "hasLibraryPrep",
+      "skos:prefLabel": "hasLibraryPrep",
+      "rdfs:PropertyOf": [{ "$ref": "prov:wasUsedBy" }],
+      "description": "https://datamodel.terra.bio/TerraCore#hasLibraryPrep"
+    },
+    "TerraCore:hasPairedNormal": {
+      "type": "string",
+      "title": "hasPairedNormal",
+      "description": "https://datamodel.terra.bio/TerraCore#hasPairedNormal"
+    }
+  },
+  "required": ["TerraCore:hasBioSampleType"],
+  "title": "BioSample",
+  "rdfs:subClassOf": ["TerraCore:Sample"],
+  "skos:prefLabel": "BioSample",
+  "skos:altLabel": ["Specimen from organism", "Biospecimen"]
+}

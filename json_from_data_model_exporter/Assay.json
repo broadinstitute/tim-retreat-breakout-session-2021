@@ -1,0 +1,20 @@
+{
+  "$id": "https://datamodel.terra.bio/TerraCore#Assay",
+  "description": "",
+  "$schema": "http://json-schema.org/draft-07/schema#/",
+  "definitions": {},
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "rdfs:label": {
+      "type": "string",
+      "description": "A human-readable name for the entity."
+    },
+    "id": { "type": "string", "description": "UUID for this entity." },
+    "describedBy": {
+      "type": "string",
+      "description": "The URL reference to the JSON Schema that defines this object."
+    }
+  },
+  "required": []
+}
